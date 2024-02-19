@@ -1,0 +1,23 @@
+@import (reference) "/src/app/app.component.less";
+
+.field {
+  margin: 20px 0;
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #eeeeee;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    &::placeholder {
+      font-size: 14px;
+    }
+    &:hover {
+      background: darken(#eeeeee, 5%);
+    }
+    &:focus-visible {
+      outline: 2px solid @primary-color;
+    }
+  }
+}

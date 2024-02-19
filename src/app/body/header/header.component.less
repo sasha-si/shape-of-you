@@ -1,0 +1,42 @@
+@import (reference) "/src/app/app.component.less";
+
+.h-header {
+  .h-sheet {
+    max-width: 1024px;
+    margin: 0 auto;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .h-logo {
+      height: 70px;
+      &-img {
+        height: 100%;
+      }
+    }
+    .menu-list {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      font-weight: 700;
+      font-size: 1rem;
+      a {
+        position: relative;
+        text-decoration: none;
+        color: @secondary-color;
+        padding: 10px;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+      .login {
+        border: 2px solid @primary-color;
+        border-radius: 15px;
+        &:hover {
+          color: @primary-color;
+          border: 2px solid @secondary-color;
+        }
+      }
+    }
+  }
+}
