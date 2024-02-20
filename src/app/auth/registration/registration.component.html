@@ -1,34 +1,27 @@
-<form class="form-content"> <!-- [formGroup]="form" (ngSubmit)="onSubmit()" -->
-    <h1 class="title">Welcome to Shape of you!</h1>
-    <div class="toggle">
-      Already have an account? <a routerLink="/auth/login">Sign In</a>
-    </div>
-    <app-input
-      class="input"
-      [placeHolder]="'Enter a name'"
-      
-    ><!-- formControlName="name" --></app-input>
-    <app-input
-      class="input"
-      [placeHolder]="'Enter an email address'"
-      [type]="'email'"
-      
-    ><!-- formControlName="email" --></app-input>
-    <app-input
-      class="input"
-      [placeHolder]="'Password'"
-      [type]="'password'"
-      
-    ><!-- formControlName="password" --></app-input>
-    <div class="checkbox">
-      <input type="checkbox" id="remember-me" value="false" />
-      <label for="remember-me">I want to receive special offers <span class="italic">(Optional)</span></label>
-    </div>
-    <app-button
-      class="button"
-      [name]="'Sign Up'"
-      [type]="'submit'"
-      [fullWidth]="true"
-      [disabled]="form.invalid"
-    ></app-button>
-  </form>
+<!-- <form class="form-content" [formGroup]="form" (ngSubmit)="onSubmit()"> -->
+<form class="form-content">
+  <h1 class="title">Welcome to Shape of you!</h1>
+  <div class="toggle">
+    Already have an account? <a routerLink="/auth/login">Sign In</a>
+  </div>
+  <app-input
+    [form]="form"
+    [placeHolder]="'Enter a name'"
+    [type]="'text'"
+    [id]="'name'"
+    [formControlName]="'name'"
+  ></app-input>
+  <div class="checkbox">
+    <input type="checkbox" id="remember-me" value="false" />
+    <label for="remember-me"
+      >I want to receive special offers
+      <span class="italic">(Optional)</span>
+    </label>
+  </div>
+  <app-button
+    [name]="'Sign Up'"
+    [type]="'submit'"
+    [fullWidth]="true"
+    [disabled]="form.invalid"
+  ></app-button>
+</form>

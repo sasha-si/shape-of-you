@@ -1,4 +1,10 @@
-<div class="field">
-  <input type="{{type}}" placeholder="{{ placeHolder }}" />
-  <!-- <label>{{ placeHolder }}</label> -->
+<div [formGroup]="form">
+  <!-- <label for="{{ id }}">{{ placeHolder }}</label> -->
+  <input
+    class="field"
+    type="{{ type }}"
+    id="{{ id }}"
+    placeholder="{{ placeHolder }}"
+    formControlName="{{ formControlName }}"
+  />
 </div>

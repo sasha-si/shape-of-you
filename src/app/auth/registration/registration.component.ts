@@ -18,4 +18,6 @@ export class RegistrationComponent {
       'password': ['', [Validators.required, Validators.minLength(6)]],
     })
   }
+    
+  onSubmit() {};
 }

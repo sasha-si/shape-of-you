@@ -16,4 +16,6 @@ export class ForgotPasswordComponent {
       'email': ['', [Validators.required, Validators.email]],
     })
   }
+
+  onSubmit() {};
 }

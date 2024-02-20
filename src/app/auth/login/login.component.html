@@ -1,26 +1,26 @@
-<form class="form-content">
-  <!-- [formGroup]="form" (ngSubmit)="onSubmit()" -->
+<form class="form-content" [formGroup]="form" (ngSubmit)="onSubmit()">
   <h1 class="title">Welcome back to Shape of you!</h1>
   <div class="toggle">
     Don't have an account? <a routerLink="/auth">Sign Up</a>
   </div>
   <app-input
-    class="input"
+    [form]="form"
     [placeHolder]="'Enter an email address'"
     [type]="'email'"
-    formControlName="email"
+    [id]="'email'"
+    [formControlName]="'email'"
   ></app-input>
   <app-input
-    class="input"
+    [form]="form"
     [placeHolder]="'Password'"
     [type]="'password'"
-    formControlName="password"
+    [id]="'password'"
+    [formControlName]="'password'"
   ></app-input>
   <div class="forgot-password">
-    <a routerLink="/auth/forgotPassword">Forgot Password?</a>
+    <a routerLink="/auth/forgot-password">Forgot Password?</a>
   </div>
   <app-button
-    class="button"
     [name]="'Sign In'"
     [type]="'submit'"
     [fullWidth]="true"

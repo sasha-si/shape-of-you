@@ -1,5 +1,5 @@
-import { Component, Input, forwardRef } from '@angular/core';
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,6 +7,9 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
   styleUrls: ['./input.component.less'],
 })
 export class InputComponent {
+  @Input() form!: FormGroup;
   @Input() placeHolder = '';
   @Input() type = '';
+  @Input() id = '';
+  @Input() formControlName = '';
 }

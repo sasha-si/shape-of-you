@@ -7,23 +7,31 @@ import { LandingComponent } from './body/landing/landing.component';
 import { MainComponent } from './body/main/main.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { PortfolioComponent } from './body/portfolio/portfolio.component';
+import { AboutUsComponent } from './body/about-us/about-us.component';
+import { TeamComponent } from './body/team/team.component';
+import { ContactUsComponent } from './body/contact-us/contact-us.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/body', pathMatch: 'full' },
+  { path: '', redirectTo: '/body/main', pathMatch: 'full' },
   {
     path: 'body', component: BodyComponent, children: [
-      { path: '', component: MainComponent },
-      { path: 'landing', component: LandingComponent }
+      { path: 'main', component: MainComponent },
+      { path: 'landing', component: LandingComponent },
+      { path: 'portfolio', component: PortfolioComponent },
+      { path: 'about-us', component: AboutUsComponent },
+      { path: 'team', component: TeamComponent },
+      { path: 'contact-us', component: ContactUsComponent }
     ]
   },
   {
     path: 'auth', component: AuthComponent, children: [
       { path: '', component: RegistrationComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'forgotPassword', component: ForgotPasswordComponent }
+      { path: 'forgot-password', component: ForgotPasswordComponent }
     ]
   },
-  { path: '**', redirectTo: '/body' }
+  { path: '**', redirectTo: '/body/main' }
 ];
 
 @NgModule({

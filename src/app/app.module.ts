@@ -13,6 +13,10 @@ import { LoginComponent } from './auth/login/login.component';
 import { LandingComponent } from './body/landing/landing.component';
 import { MainComponent } from './body/main/main.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
+import { PortfolioComponent } from './body/portfolio/portfolio.component';
+import { AboutUsComponent } from './body/about-us/about-us.component';
+import { TeamComponent } from './body/team/team.component';
+import { ContactUsComponent } from './body/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.
     RegistrationComponent,
     LoginComponent,
     LandingComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    PortfolioComponent,
+    AboutUsComponent,
+    TeamComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
