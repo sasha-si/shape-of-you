@@ -11,6 +11,20 @@
     [id]="'name'"
     [formControlName]="'name'"
   ></app-input>
+  <app-input
+    [form]="form"
+    [placeHolder]="'Enter an email address'"
+    [type]="'email'"
+    [id]="'email'"
+    [formControlName]="'email'"
+  ></app-input>
+  <app-input
+    [form]="form"
+    [placeHolder]="'Password'"
+    [type]="'password'"
+    [id]="'password'"
+    [formControlName]="'password'"
+  ></app-input>
   <div class="checkbox">
     <input type="checkbox" id="remember-me" value="false" />
     <label for="remember-me"
